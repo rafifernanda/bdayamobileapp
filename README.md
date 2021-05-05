@@ -1,4 +1,4 @@
-# B-Daya App
+# B-Daya App (my thesis project)
 
 An Application to preserve Indonesian Culture
 
