@@ -1,5 +1,7 @@
 name: thesisproject
-description: A new Flutter application.
+description: An Application to preserve Indonesia culture
+author: Rafi Fernanda <fernanda.mrafi@gmail.com>
+homepage: https://github.com/rafifernanda/bdayamobileapp.git
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
