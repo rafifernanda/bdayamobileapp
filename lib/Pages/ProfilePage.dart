@@ -42,28 +42,32 @@ class _ProfileState extends State<Profile> {
 //    RefreshList();
   }
 
-  void confirm(){
-    AlertDialog alertDialog = new AlertDialog(
-      content: Text("Are you Sure want to Logout?",style: TextStyle(fontFamily: 'nunito'),),
-      actions: <Widget>[
-        RaisedButton(
-          child: Text("YES",style: TextStyle(fontFamily: 'nunito', color: kwhite),),
-          color: korange,
-          onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (BuildContext)=> SignInPage()));
-          },
-        ),
-        RaisedButton(
-          child: Text("CANCEL",style: TextStyle(fontFamily: 'nunito', color: kwhite),),
-          color: Colors.grey[300],
-          onPressed: (){
-            Navigator.pop(context);
-          },
-        )
-      ],
+  Future<void> confirm() async {
+    return showDialog<void>(
+      context: context,
+      barrierDismissible: false, // user must tap button!
+      builder: (BuildContext context) {
+        return AlertDialog(
+          content: Text("Are you Sure want to Logout?",style: TextStyle(fontFamily: 'nunito'),),
+          actions: <Widget>[
+            RaisedButton(
+              child: Text("YES",style: TextStyle(fontFamily: 'nunito', color: kwhite),),
+              color: korange,
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (BuildContext)=> SignInPage()));
+              },
+            ),
+            RaisedButton(
+              child: Text("CANCEL",style: TextStyle(fontFamily: 'nunito', color: kwhite),),
+              color: Colors.grey[300],
+              onPressed: (){
+                Navigator.pop(context);
+              },
+            )
+          ],
+        );
+      },
     );
-
-    showDialog(context: context, child: alertDialog);
   }
   @override
   Widget build(BuildContext context) {
