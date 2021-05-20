@@ -189,29 +189,14 @@ class _DashboardState extends State<Dashboard> {
                 Padding(
                   padding: const EdgeInsets.only(top: 20, bottom: 20),
                   child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       BoldText("Culture", 20.0, kblack),
-                      SizedBox(
-                        width: 60,
-                      ),
-                      GestureDetector(
-                        onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (_) {
-                            return List_Culture();
-                          }));
-                        },
-                        child: BoldText("More", 15.0, korange),
-                      ),
-                      Icon(
-                        Icons.navigate_next,
-                        color: korange,
-                      ),
-
                     ],
                   ),
                 ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     GestureDetector(
                         onTap: (){
@@ -230,12 +215,11 @@ class _DashboardState extends State<Dashboard> {
                         },
                         child: CitiesImage("assets/images/Bali.jpg","BALI")
                     ),
-
-
                   ],
                 ),
                 SizedBox(height: 28,),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     GestureDetector(
                       onTap: (){
@@ -245,7 +229,7 @@ class _DashboardState extends State<Dashboard> {
                       },
                       child: CitiesImage("assets/images/Borneo.jpg","BORNEO"),
                     ),
-//
+
                     SizedBox(width: 28,),
                     GestureDetector(
                       onTap: (){
@@ -255,13 +239,32 @@ class _DashboardState extends State<Dashboard> {
                       },
                       child: CitiesImage("assets/images/Papua.jpg","PAPUA"),
                     ),
-//
-
                   ],
 
                 ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20, bottom: 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (_) {
+                            return List_Culture();
+                          }));
+                        },
+                        child: BoldText("More", 15.0, korange),
+                      ),
+                      Icon(
+                        Icons.navigate_next,
+                        color: korange,
+                      ),
+                    ],
+                  ),
+                )
 
-              ]),
+              ]
+              ),
             ),
           ],
         ),
