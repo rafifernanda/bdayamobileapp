@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:thesisproject/Pages/Home.dart';
 import 'package:thesisproject/Utils/Buttons.dart';
 import 'package:thesisproject/Utils/TextStyles.dart';
 import 'package:thesisproject/Utils/consts.dart';
@@ -17,7 +18,7 @@ class SlideItem extends StatelessWidget {
   Widget build(BuildContext context) {
     onPressed (){
       Navigator.push(context, MaterialPageRoute(builder: (_) {
-        return SignInPage();
+        return Home();
       }));    }
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,

@@ -4,6 +4,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:thesisproject/Pages/Boarding/SliderDots.dart';
 import 'package:thesisproject/Pages/Boarding/SliderItems.dart';
+import 'package:thesisproject/Pages/Home.dart';
 import 'package:thesisproject/Pages/SignInPage.dart';
 import 'package:thesisproject/Utils/TextStyles.dart';
 import 'package:thesisproject/Utils/consts.dart';
@@ -83,7 +84,7 @@ class _SliderLayoutViewState extends State<SliderLayoutView> {
                     padding: EdgeInsets.only(left: 15.0, bottom: 15.0),
                     child: GestureDetector(
                         onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (BuildContext)=>SignInPage()));// Go To Pages/SignInPage.dart
+                          Navigator.push(context, MaterialPageRoute(builder: (BuildContext)=>Home()));// Go To Pages/SignInPage.dart
                         },
                         child: BoldText(SKIP,20,kblack)),
 
